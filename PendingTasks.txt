@@ -1,0 +1,12 @@
+Pending Tasks:
+
+    - Make my Hero component dynamic 
+        <Hero
+            bgImg: 'DarkNight'
+            heading: 'The chicken is on fire'
+            subheading: 'I´m an Astrophysicist'
+            text: 'Here you can find stellar movement data of the planet orbiting the Sun'
+            buttonText='Travel Plan'
+            url='/'
+            btnClass='show'
+        />

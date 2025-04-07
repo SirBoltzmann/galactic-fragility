@@ -1,0 +1,119 @@
+.featured-apps {
+    background-image: linear-gradient(to bottom, #252222, #1d1b1b, #161515, #0d0c0c, #000000);
+    color: white;
+    padding: 3.5rem 5rem;
+}
+
+.feat-apps-subheading {
+    font-family: 'Poppins';
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 10px 7px 10px rgba(252, 252, 252, 0.2);
+}
+
+.feat-apps-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.featured-app {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.featured-app a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Stars-and-exoplanets app to the right */
+.stars-and-exoplanets-app { 
+    justify-content: flex-end;
+}
+
+.planet-trajectory {
+    margin-top: 1rem;
+    width: 270px;
+}
+
+.exoplanet,
+.moon {
+    width: 200px;
+}
+
+.app-title {
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+@media screen and ( max-width: 750px ) {
+    .featured-apps {
+        padding: 3rem 3.5rem;
+    }
+
+    .feat-apps-subheading { 
+        font-size: 2rem;
+    }
+
+    .featured-app {
+        justify-content: center;
+    }
+
+    .planet-trajectory {
+        margin-top: 0.5rem;
+        width: 200px;
+    }
+    
+    .exoplanet,
+    .moon {
+        width: 150px;
+    }
+
+    .app-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and ( max-width: 450px ) {
+    .featured-apps {
+        padding: 3rem 2rem;
+    }
+
+    .feat-apps-subheading {
+        font-size: 1.8rem;
+    }
+
+    .app-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and ( max-width: 360px ) {
+    .feat-apps-subheading {
+        font-size: 1.6rem;
+    }
+
+    .planet-trajectory {
+        margin-top: 0.5rem;
+        width: 180px;
+    }
+    
+    .exoplanet,
+    .moon {
+        width: 130px;
+    }
+
+    .app-title {
+        font-size: 1.1rem;
+    }
+}
