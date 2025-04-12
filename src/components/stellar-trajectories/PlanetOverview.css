@@ -1,0 +1,161 @@
+.planet-overview {
+    position: relative;
+    background-image: linear-gradient(to top, #292828, #181818);
+    width: 100%;
+    padding: 3rem;
+    color: rgb(227, 229, 232);
+}
+
+.planet-overview h2 {
+    font-size: 2.2rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: rgb(227, 229, 232);
+}
+
+.planets-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    max-width: 1150px;
+    margin: 3rem auto;
+}
+
+.planet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 240px;
+    height: 240px;
+    padding: 0.5rem;
+    background-color: #101010;
+    border-radius: 1rem;
+    outline: 2px solid #101010;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.45s ease-out;
+} 
+
+.planet-card:hover {
+    outline: 2px solid white;
+    box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.224);
+}
+
+.planet-card img {
+    width: 150px;
+    user-select: none;
+    transition: all 0.6s ease-in-out;
+}
+
+.planet-card:hover img {
+    transform: scale(1.1) rotate(-25deg);
+}
+
+.saturn:hover img {
+    transform: rotate(20deg) !important;
+}
+
+.planet-card h3 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.toggle-planets {
+    display: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding: 0.7rem 1.1rem;
+    margin: 4rem auto 1rem;
+    background-color: white;
+    border-radius: 0.7rem;
+    border: none;
+    outline: 1px solid white;
+    color: #2f2e2e;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle-planets:hover {
+    background-color: #1a1a1a;
+    color: white;
+    outline: 1px solid white;
+    box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.424);
+}
+
+@media screen and ( max-width: 768px ) {
+    .toggle-planets {
+        display: block;
+    }
+}
+
+
+/* When a card is clicked a bigger card is showed */
+.planets-wrapper.only-one-visible {
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.planets-wrapper.only-one-visible .planet-card {
+    width: 280px;
+    height: 280px;
+}
+
+.planets-wrapper.only-one-visible img {
+    width: 180px;
+}
+
+.planet-card.hidden {
+    display: none;
+}
+
+.planet-data.show {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    background-color: #101010;
+    border-radius: 1.5rem;
+    outline: 2px solid white;
+    padding: 1rem 1.5rem;
+    transition: all 0.45s ease-in-out;
+    transform: translate(0);
+    overflow-y: hidden;
+}
+
+.planet-data.show:hover {
+    box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.124);
+}
+
+.planet-data.hide {
+    position: absolute;
+    transform: translateX(100%);
+}
+
+.planet-data i {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.planet-data.hide i {
+    display: none;
+}
+
+@media screen and ( max-width: 450px ) {
+    .planet-overview {
+        padding: 1.5rem;
+    }
+    
+    .planet-data i {
+        right: 6%;
+        top: 4%;
+        font-size: 1.6rem;
+    }
+}

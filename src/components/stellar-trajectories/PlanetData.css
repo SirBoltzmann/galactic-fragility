@@ -1,0 +1,60 @@
+/* PAYLOAD STYLE */
+.planet-data-payload {
+    margin: 1.3rem 0 3rem 0.8rem;
+}
+
+.planet-data-payload > p,
+strong {
+    font-family: 'Poppins';
+}
+
+.body-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.13rem;
+    margin-bottom: 0.4rem;
+}
+
+strong {
+    font-style: italic;
+    margin-right: 0.5rem;
+}
+
+.last-update {
+    margin-top: 8rem;
+}
+
+
+@media screen and ( max-width: 450px ) {
+    .planet-data-payload {
+        margin: 0.7rem 0 0.8rem 0;
+    }
+
+    .planet-data-payload > p,
+    strong {
+        font-family: 'Poppins';
+    }
+
+    .body-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 0.96rem;
+        margin-bottom: 0.3rem;
+    }
+
+    strong {
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+
+    .last-update {
+        margin-top: 8rem;
+    }
+
+}
