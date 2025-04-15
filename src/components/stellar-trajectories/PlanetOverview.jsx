@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Planets } from './planetCardData';
 import useWindowWidth from './useWindowWidth';
 import PlanetData from './PlanetData';
-import astronomyAPI from '../../services/astronomyApi';
+import { getPositions } from '../../services/positions.js';
 import './PlanetOverview.css';
 
 
@@ -25,20 +25,17 @@ const PlanetOverview = () => {
             const dateStr = today.toISOString().split('T')[0];
             const timeStr = today.toTimeString().split(' ')[0];
 
-            const response = await astronomyAPI.get('', {
-                params: {
-                    latitude,
-                    longitude,
-                    from_date: dateStr,
-                    to_date: dateStr,
-                    elevation: 0,
-                    time: timeStr,
-                    bodies: []
-                }
+            const response = await getPositions({
+                latitude,
+                longitude,
+                from_date: dateStr,
+                to_date: dateStr,
+                elevation: 0,
+                time: timeStr
             });
-            console.log("Full API response:", response.data);
-            console.log('Update:', new Date().toLocaleTimeString());
-            setPlanetData(response.data.data.table.rows);
+            console.log("Full API response:", response.data.table.rows);
+            console.log('Updated at:', new Date().toLocaleTimeString());
+            setPlanetData(response.data.table.rows);
 
         } catch (err) {
             if (err.response) {
