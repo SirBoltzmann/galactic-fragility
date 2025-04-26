@@ -1,6 +1,7 @@
 //COMPONENTS here
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
+import SpaceOverview from '../components/stars-and-exoplanets/SpaceOverview.jsx';
 import Footer from '../components/Footer.jsx';
 import StarsExoplanetsBg from '../assets/five.jpg';
 
@@ -26,6 +27,7 @@ const StarsAndExoplanets = () => {
                 // hero-btn to show ---- hero-btn-hide to hide
                 btnClass='hero-btn'
             />
+            <SpaceOverview/>
             <Footer/>
         </>
     )

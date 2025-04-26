@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-exports.handler = async function (event) {
+export const handler = async function (event) {
     const { latitude, longitude, from_date, to_date, elevation, time } = event.queryStringParameters;
 
     const API_KEY = process.env.VITE_API_KEY;
