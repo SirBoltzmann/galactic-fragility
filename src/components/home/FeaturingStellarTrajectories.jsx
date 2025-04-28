@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './FeaturingStellarTrajectories.css';
-import GalacticBg from '../../assets/galactic-bg-img.jpg';
+import GalacticBg from '../../assets/six.jpg';
 
 
 const FeaturingStellarTrajectories = () => {
