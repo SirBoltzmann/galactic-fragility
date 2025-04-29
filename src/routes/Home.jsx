@@ -3,7 +3,7 @@ import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
 import GalacticInfo from '../components/home/GalacticInfo.jsx';
 import FeaturedApps from '../components/home/FeaturedApps.jsx';
-import FeaturingStellarTrajectories from '../components/home/FeaturingStellarTrajectories.jsx';
+import FeaturingPlanetaryTrajectories from '../components/home/FeaturingPlanetaryTrajectories.jsx';
 import Footer from '../components/Footer.jsx';
 
 // Hero img
@@ -32,7 +32,7 @@ const Home = () => {
             />
             <GalacticInfo/>
             <FeaturedApps/>
-            <FeaturingStellarTrajectories/>
+            <FeaturingPlanetaryTrajectories/>
             <Footer/>
         </>
     )

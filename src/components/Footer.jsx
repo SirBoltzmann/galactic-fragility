@@ -17,9 +17,9 @@ const Footer = () => {
         <div className="footer-content">
             <h2>Services</h2>
             <ul>
-                <li> <Link to={'/stellar-trajectories'}>Stellar Trajectories App</Link> </li>
-                <li> <Link to={'/stars-planets'}>Stars and Exoplanets App</Link> </li>
-                <li> <Link to={'/sun-moon'}>Sun and Moon App</Link> </li>
+                <li> <Link to={'/planetary-trajectories'}>Planetary Trajectories</Link> </li>
+                <li> <Link to={'/stars-constellations'}>Stars and Constellations</Link> </li>
+                <li> <Link to={'/stellar-bodies'}>Search Stellar Bodies</Link> </li>
                 <li> <a href=''>Report a bug</a> </li>
             </ul>
         </div>

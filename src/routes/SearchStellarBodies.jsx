@@ -2,17 +2,17 @@
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
-import SunAndMoonBg from '../assets/seven.jpg';
+import StellarBodiesBg from '../assets/seven.jpg';
 
 
-const SunAndMoon = () => {
+const SearchStellarBodies = () => {
     return (
         <>
             <Navbar/>
             <Hero
-                bgImg = {SunAndMoonBg}
+                bgImg = {StellarBodiesBg}
                 heading = "Welcome to"
-                subheading = 'Sun and Moon'
+                subheading = 'Stellar Bodies'
                 text = {
                     [
                         "In the dance of the Sun and the Moon, we find the harmony of opposites", 
@@ -21,7 +21,7 @@ const SunAndMoon = () => {
                     ]
                 }
                 buttonText="Let's go!"
-                url='/stellar-trajectories'
+                url=''
                 // hero-btn to show ---- hero-btn-hide to hide
                 btnClass='hero-btn'
             />
@@ -30,4 +30,4 @@ const SunAndMoon = () => {
     )
 }
 
-export default SunAndMoon;
+export default SearchStellarBodies;

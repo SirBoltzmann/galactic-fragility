@@ -88,7 +88,7 @@ const PlanetOverview = () => {
 
     return (
         <div className='planet-overview' id='planet-overview'>
-            <h2>Stellar Trajectories</h2>
+            <h2>Planetary Trajectories</h2>
 
             <div className={`planets-wrapper ${hiddenPlanets.length > 0 ? 'only-one-visible' : ''}`}>
                 {

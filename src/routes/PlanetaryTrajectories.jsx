@@ -2,18 +2,18 @@
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
-import PlanetOverview from '../components/stellar-trajectories/PlanetOverview.jsx';
-import StellarTrajeBg from '../assets/two.jpg';
+import PlanetOverview from '../components/planetary-trajectories/PlanetOverview.jsx';
+import PlanetaryTrajecBg from '../assets/two.jpg';
 
 
-const StellarTrajectories = () => {
+const PlanetaryTrajectories = () => {
     return (
         <>
             <Navbar/>
             <Hero
-                bgImg = {StellarTrajeBg}
+                bgImg = {PlanetaryTrajecBg}
                 heading = 'Welcome'
-                subheading = 'To Stellar Trajectories'
+                subheading = 'To Planetary Trajectories'
                 text = {
                     [
                         'The stars have always guided us,',
@@ -33,4 +33,4 @@ const StellarTrajectories = () => {
     )
 }
 
-export default StellarTrajectories;
+export default PlanetaryTrajectories;

@@ -1,19 +1,19 @@
 //COMPONENTS here
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
-import SpaceOverview from '../components/stars-and-exoplanets/SpaceOverview.jsx';
+import SpaceOverview from '../components/stars-and-constellations/SpaceOverview.jsx';
 import Footer from '../components/Footer.jsx';
-import StarsExoplanetsBg from '../assets/five.jpg';
+import StarsConstellationsBg from '../assets/five.jpg';
 
 
-const StarsAndExoplanets = () => {
+const StarsAndConstellations = () => {
     return (
         <>
             <Navbar/>
             <Hero
-                bgImg = {StarsExoplanetsBg}
+                bgImg = {StarsConstellationsBg}
                 heading = "Now you're"
-                subheading = 'In Stars and Exoplanets'
+                subheading = 'In Stars and Constellations'
                 text = {
                     [
                         "Stars shine brightly in the night sky, and surrounding them,", 
@@ -23,7 +23,7 @@ const StarsAndExoplanets = () => {
                     ]
                 }
                 buttonText='Let´s go!'
-                url='/stellar-trajectories'
+                url=''
                 // hero-btn to show ---- hero-btn-hide to hide
                 btnClass='hero-btn'
             />
@@ -33,4 +33,4 @@ const StarsAndExoplanets = () => {
     )
 }
 
-export default StarsAndExoplanets;
+export default StarsAndConstellations;

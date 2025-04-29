@@ -6,20 +6,20 @@ const AppItems = [
         cName: 'app-links'
     },
     {
-        title: 'Stellar Trajectories',
-        url: '/stellar-trajectories',
+        title: 'Planetary Trajectories',
+        url: '/planetary-trajectories',
         cName:'app-links'
     },
 
     {
-        title: 'Stars and Exoplanets',
-        url: '/stars-planets',
+        title: 'Stars and Constellations',
+        url: '/stars-constellations',
         cName:'app-links'
     },
 
     {
-        title: 'Sun and Moon',
-        url: '/sun-moon',
+        title: 'Search Stellar Bodies',
+        url: '/stellar-bodies',
         cName:'app-links'
     }
 ]

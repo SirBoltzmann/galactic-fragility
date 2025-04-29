@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import './FeaturingStellarTrajectories.css';
+import './FeaturingPlanetaryTrajectories.css';
 import GalacticBg from '../../assets/six.jpg';
 
 
-const FeaturingStellarTrajectories = () => {
+const FeaturingPlanetaryTrajectories = () => {
     return (
-        <div className='featuring-stellar-trajectories'>
+        <div className='featuring-planetary-trajectories'>
             <div className="featuring-content">
-                <span className='featuring-first-text'>Featuring "Stellar Trajectories"</span>
+                <span className='featuring-first-text'>Featuring "Planetary Trajectories"</span>
                 <h2 className='featuring-subheading'>Update yourself with the latest events in the Astronomic Field</h2>
 
                 <p className="featuring-date">Nearby Mars orbit in September 24th</p>
@@ -17,7 +17,7 @@ const FeaturingStellarTrajectories = () => {
                 </p>
 
                 <span className="featuring-redirect">
-                    <Link to={'/stellar-trajectories'}>Go to Stellar Trajectories <i className='fa-solid fa-arrow-right'></i> </Link>
+                    <Link to={'/planetary-trajectories'}>Go to Planetary Trajectories <i className='fa-solid fa-arrow-right'></i> </Link>
                 </span>
             </div>
 
@@ -26,4 +26,4 @@ const FeaturingStellarTrajectories = () => {
     )
 }
 
-export default FeaturingStellarTrajectories;
+export default FeaturingPlanetaryTrajectories;

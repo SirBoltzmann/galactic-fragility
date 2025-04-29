@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getStarChart } from '../../services/starCharts';
+import { getStarChart } from '../../services/starCharts.js';
 import constellations from './ConstellationsData.jsx';
 import Loader from '../../assets/loader.png'
 import './SpaceOverview.css';
