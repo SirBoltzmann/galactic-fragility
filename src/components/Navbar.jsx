@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppItems from './AppItems.jsx';
 import './Navbar.css';
 import GalaxyDark from '../assets/galaxy-dark.png';
@@ -7,12 +7,37 @@ import GalaxyDark from '../assets/galaxy-dark.png';
 
 const Navbar = () => {
     const [ state, setState ] = useState(false);
-    const handleClick = () => {
-        setState(!state)
-    }
+    const handleClick = () => setState(!state);
+
+    const [ showNavbar, setShowNavbar ] = useState(true);
+    const [ lastScrollY, setLastScrollY ] = useState(window.scrollY);
+
+
+    useEffect(() => {
+        const handleScroll = () =>  {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                //scrolling down
+                setShowNavbar(false);
+            } else {
+                //scrolling up
+                setShowNavbar(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [lastScrollY])
+
 
     return (
-        <nav className={ state ? 'navbar-items active' : 'navbar-items'}>
+        <nav 
+            className={`${state ? 'navbar-items active' : 'navbar-items'} ${showNavbar ? 'show' : 'hide'}`}
+        >
 
             {/* Dropdown is only visible in screens greater than 950px */}
             <div className="dropdown">
