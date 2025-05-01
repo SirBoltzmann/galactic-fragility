@@ -10,6 +10,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(80%);
 }
 
 .hero-text {
@@ -17,9 +18,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1100px;
     top: 52%;
     left: 50%;
+    padding: 4.5rem 3rem;
     transform: translate(-50%, -50%);
 }
 
@@ -27,14 +29,13 @@
     font-family: 'Poppins';
     font-size: 6rem;
     font-weight: 500;
-    margin-left: 13rem;
 }
 
 .subheading {
     font-family: 'Poppins';
     font-size: 3rem;
     font-weight: 300;
-    margin-left: 10rem;
+    margin-left: 6rem;
     margin-top: -20px;
 }
 
@@ -42,8 +43,7 @@
     font-style: italic;
     font-size: 1.6rem;
     font-weight: 400;
-    align-self: center;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .hero-btn {
@@ -57,7 +57,7 @@
     color: white;
     width: 190px;
     height: 45px;
-    margin-left: 14rem;
+    margin-left: 4rem;
     margin-top: 5rem;
     padding: 0.6rem;
     border-radius: 0.7rem;
@@ -83,16 +83,19 @@
 @media screen and ( max-width: 1150px ) {
     .hero-text {
         align-items: center;
+        padding: 4rem 2.5rem;
     }
 
-    .heading,
-    .subheading,
     .hero-btn {
         margin-left: 0;
     }
 }
 
-@media screen and ( max-width: 750px ) {
+@media screen and ( max-width: 800px ) {
+    .hero-text {
+        padding: 4rem 1.8rem;
+    }
+
     .heading {
         font-size: 5rem;
     }
@@ -108,7 +111,17 @@
     }
 }
 
+@media screen and ( max-width: 670px ) {
+
+    .heading {
+        font-size: 4.3rem;
+    }
+}
+
 @media screen and ( max-width: 600px ) {
+    .hero-text {
+        padding: 3.5rem 1.5rem;
+    }
     .heading {
         font-size: 3.5rem;
     }
@@ -128,7 +141,16 @@
     }
 }
 
+@media screen and ( max-width: 500px ) {
+    .heading {
+        font-size: 3rem;
+    }
+}
+
 @media screen and ( max-width: 450px ) {
+    .hero-text {
+        padding: 2rem 0;
+    }
     .heading {
         font-size: 2.8rem;
     }
@@ -156,6 +178,6 @@
     }
 
     .hero img {
-        filter: brightness(80%);
+        filter: brightness(70%);
     }
 }
