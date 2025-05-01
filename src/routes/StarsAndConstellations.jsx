@@ -16,10 +16,10 @@ const StarsAndConstellations = () => {
                 subheading = 'In Stars and Constellations'
                 text = {
                     [
-                        "Stars shine brightly in the night sky, and surrounding them,", 
-                        "exoplanets spin in endless motion.",
-                        "Some of these distant worlds may hold the key to life beyond our own.",  
-                        "Join us on a journey to explore them."
+                        "Gaze into the night and discover ancient stories written in starlight. ", 
+                        "Each constellation whispers secrets of time, ",
+                        "and every star burns and ",  
+                        "echo the dreams of those who once looked up.. ",
                     ]
                 }
                 buttonText='Let´s go!'

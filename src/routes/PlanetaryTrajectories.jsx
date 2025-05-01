@@ -16,10 +16,9 @@ const PlanetaryTrajectories = () => {
                 subheading = 'To Planetary Trajectories'
                 text = {
                     [
-                        'The stars have always guided us,',
-                        'whispering secrets of the universe´s vastness.',
-                        'Now, embark on a journey through stellar trajectories.',
-                        'Discover the paths of the cosmos like never before.'
+                        'Explore the hidden routes followed by planets in their eternal dance. ',
+                        'From gentle orbits to chaotic paths, each world traces ',
+                        'a story on the canvas of time and space. ',
                     ]
                 }
                 buttonText='Let´s go!'

@@ -15,9 +15,10 @@ const SearchStellarBodies = () => {
                 subheading = 'Stellar Bodies'
                 text = {
                     [
-                        "In the dance of the Sun and the Moon, we find the harmony of opposites", 
-                        "—day and night, light and dark, warmth and coolness.",
-                        "Let their eternal rhythm guide you."
+                        "Search among the stellar bodies scattered across the void. ", 
+                        "Track their paths, study their nature, ",
+                        "and uncover the unseen architecture of the universe. ",
+                        "Every search uncovers a story written in light and gravity... ",
                     ]
                 }
                 buttonText="Let's go!"
