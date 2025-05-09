@@ -119,7 +119,7 @@
 @media screen and ( max-width: 950px ) {
     .footer {
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.8rem;
     }
 
     .footer-heading h2 {
@@ -144,6 +144,16 @@
     
     .footer-social a {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and ( max-width: 540px ) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        align-items: center;
     }
 }
 
