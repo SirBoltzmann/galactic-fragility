@@ -56,7 +56,7 @@ const SpaceOverview = () => {
 		};
 		console.log("Sending data:", JSON.stringify(body, null, 2));
 
-		const attempts = Array(4).fill(null).map(() => getStarChart(body));
+		const attempts = Array(6).fill(null).map(() => getStarChart(body));
 
 		try {
 			const res = await Promise.any(attempts); // Waits to the first succesful response..
