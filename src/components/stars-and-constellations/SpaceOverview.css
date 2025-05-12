@@ -125,41 +125,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
     width: 900px;
-    padding: 1rem;
+    min-height: 400px;
     background-color: #101010;
     border-radius: 2rem;
     outline: 2px solid #fff;
-    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    transition: 0.45s ease-in-out;
 }
 
 .space-view:hover {
-    box-shadow: 0 0 50px 0 rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px 0 rgb(255, 255, 255, 0.15);
 }
 
 .space-view h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
     font-size: 1.8rem;
     font-weight: 700;
-    margin: 1rem 1rem 2rem;
+    margin: 1.35rem 1.5rem 2rem;
     color: #fff;
-    align-self: flex-start;
+    z-index: 1;
 }
 
 .generated-image {
     width: 100%;
-    max-width: 800px;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
     border-radius: 2rem;
-    outline: 1px solid #ffffff57;
 }
 
-.loader-container {
+.loader-container,
+.error-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 300px;
-    margin-top: 20%;
-    padding: 1rem;
 }
 
 .loader {
@@ -188,9 +197,34 @@
     text-align: center;
 }
 
-.error-message {
-    margin-top: 13rem;
+.error-img {
+    margin-top: 2rem;
+    width: 190px;
+    animation: errorFloating 10s ease-in-out infinite;
 }
+
+@keyframes errorFloating {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1)
+    }
+
+    25% {
+        transform: translateY(-12px) translateX(6px) rotate(3deg) scale(1.02)
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(0px) rotate(0deg) scale(1)
+    }
+
+    75% {
+        transform: translateY(-12px) translateX(-6px) rotate(-3deg) scale(1.04)
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1)
+    }
+}
+
 
 
 /* RESPONSIVE */
@@ -213,9 +247,8 @@
         width: 90%;
     }
 
-    .loader-container {
-        margin: 0;
-        width: 300px;
+    .loader-container,
+    .error-container {
         padding: 1.5rem;
     }
     
@@ -223,8 +256,8 @@
         width: 70px;
     }
 
-    .error-message {
-        margin: 5rem 0;
+    .error-img {
+        width: 150px;
     }
 }
 

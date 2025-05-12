@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getStarChart } from '../../services/starCharts.js';
 import constellations from './ConstellationsData.jsx';
-import Loader from '../../assets/loader.png'
+import Loader from '../../assets/loader.png';
+import ErrorImg from '../../assets/error.png';
 import './SpaceOverview.css';
 
 
@@ -135,7 +136,7 @@ const SpaceOverview = () => {
 				</div>
 
 				<div className="space-view">
-					<h2>View at the given position and entry values</h2>
+					<h2 style={{display: loading || error ? 'none' : 'block'}} >View at the given position and entry values</h2>
 					{
 						loading
 							? (
@@ -145,7 +146,12 @@ const SpaceOverview = () => {
 								</div>
 							)
 							: error 
-								? ( <h3 className='error-message'>There was an error creating your star chart.. Please, try again..</h3> )
+								? ( 
+									<div className='error-container'>
+										<h3 className='error-message'>There was an error creating your star chart.. Please, try again..</h3>
+										<img src={ErrorImg} className='error-img' alt="error generating the image" />
+									</div>
+								 )
 								: imageUrl ? ( <img src={imageUrl} className='generated-image' /> ) : ''
 					}
 				</div>
