@@ -40,6 +40,11 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: all 0.7s ease-in-out;
+}
+
+.featured-app a:hover {
+    transform: scale(1.03);
 }
 
 /* Stars-and-constellations app to the right */
