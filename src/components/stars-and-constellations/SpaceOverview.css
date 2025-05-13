@@ -29,7 +29,7 @@
     display: block;
 }
 
-/* Space Form */
+/* SPACE FORM */
 
 .space-form {
     width: 500px;
@@ -119,7 +119,7 @@
 }
 
 
-/* Space View */
+/* SPACE VIEW */
 
 .space-view {
     display: flex;
@@ -137,7 +137,7 @@
 }
 
 .space-view:hover {
-    box-shadow: 0 0 50px 0 rgb(255, 255, 255, 0.15);
+    box-shadow: 0 0 50px 0 rgb(255, 255, 255, 0.1);
 }
 
 .space-view h2 {
@@ -147,8 +147,105 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin: 1.35rem 1.5rem 2rem;
+    padding-right: 1.8rem;
     color: #fff;
+    text-shadow: 0 0 10px rgb(0, 0, 0, 0.85);
     z-index: 1;
+}
+
+/* HELP ICON */
+.space-view i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 1.6rem;
+    color: #ffffff;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.space-view i::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #232121;
+    box-shadow: 0 0 13px 0 black;
+    border-radius: 50%;
+    z-index: -1;   
+}
+
+.space-view i:hover {
+    transform: scale(1.07);
+}
+
+.info-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    background-color: #101010;
+    color: #ffffff;
+    padding: 1.3rem;
+    outline: 2px solid #ffffff;
+    border-radius: 1.8rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.info-content > * {
+    font-family: 'Poppins';
+}
+
+.info-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.info-content span:nth-child(5) {
+    font-weight: 600;
+}
+
+.info-content button {
+    background-color: #101010;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    border-radius: 0.7rem;
+    border: none;
+    outline: 2px solid #fff;
+    margin: 1.8rem 0 0.4rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.info-content button:hover {
+    background-color: #fff;
+    color: #101010;
+    border-radius: 1.1rem;
+    outline: none;
 }
 
 .generated-image {
@@ -247,6 +344,14 @@
         width: 90%;
     }
 
+    .space-view h2 {
+        font-size: 1.68rem;
+    }
+
+    .space-view i {
+        font-size: 1.6rem;
+    }
+
     .loader-container,
     .error-container {
         padding: 1.5rem;
@@ -304,13 +409,32 @@
         width: 160px;
     }
 
-    .space-view { /* Space view styles */
+    /* SPACE VIEW */
+
+    .space-view { 
         width: 100%;
         min-width: 300px;
     }
 
     .space-view h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+    }
+
+    /* HELP POP-UP */
+    .space-view i {
+        font-size: 1.5rem;
+    }
+
+    .info-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-content span {
+        font-size: 0.95rem;
+    }
+
+    .info-content button {
+        padding: 0.4rem 1.7rem;
     }
     
     .generated-image {

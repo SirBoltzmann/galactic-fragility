@@ -15,6 +15,7 @@ const SpaceOverview = () => {
 	const [ imageUrl, setImageUrl ] = useState('');
 	const [ loading, setLoading ] = useState(false); //testing
 	const [ error, setError ] = useState(false);
+	const [ showInfo, setShowInfo ] = useState(false);
 
 	// Obtain Location
 	useEffect(() => {
@@ -136,8 +137,30 @@ const SpaceOverview = () => {
 				</div>
 
 				<div className="space-view">
-					<h2 style={{display: loading || error ? 'none' : 'block'}} >View at the given position and entry values</h2>
-					{
+					<h2 style={{ display: loading || error ? 'none' : 'block' }} >View at the given position and entry values</h2>
+					<i //show help icon
+						className="fa-solid fa-circle-question"
+						onClick={() => setShowInfo(!showInfo)}
+						title='How does this work?'
+					></i>
+					
+					{ showInfo && ( //pop-up info displayed when help-icon is clicked
+						<div className='info-popup'>
+							<div className={`info-content`}>
+								<h3>How does this work?</h3>
+								<span>This feature generates a star chart based on your current location and selected date.</span>
+								<span>The selected constellation is highlighted and the Star Chart is generated using the style you choose.</span>
+								<span>Make sure to allow geolocation permissions (this is Important! :3) and choose a date to continue.</span>
+								<span>The app will probably throw errors while generating your Star Chart due to high API traffic or something else.</span>
+								<span>Just try again. Thank you ❤️🌌</span>
+								<span>Enjoy the app, and may the stars follow your path to space, and beyond...</span>
+
+								<button onClick={() => setShowInfo(false)}>Got it!</button>
+							</div>
+						</div>
+					)}
+
+					{ //Rendering image CASES
 						loading
 							? (
 								<div className='loader-container'>
@@ -151,7 +174,7 @@ const SpaceOverview = () => {
 										<h3 className='error-message'>There was an error creating your star chart.. Please, try again..</h3>
 										<img src={ErrorImg} className='error-img' alt="error generating the image" />
 									</div>
-								 )
+								)
 								: imageUrl ? ( <img src={imageUrl} className='generated-image' /> ) : ''
 					}
 				</div>
