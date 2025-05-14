@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { getStarChart } from '../../services/starCharts.js';
 import constellations from './ConstellationsData.jsx';
 import Loader from '../../assets/loader.png';
-import ErrorImg from '../../assets/error.png';
+import ErrorImg1 from '../../assets/error-img-1.png';
+import ErrorImg2 from '../../assets/error-img-2.png';
 import './SpaceOverview.css';
 
 
@@ -173,7 +174,10 @@ const SpaceOverview = () => {
 								? ( 
 									<div className='error-container'>
 										<h3 className='error-message'>There was an error creating your star chart.. Please, try again..</h3>
-										<img src={ErrorImg} className='error-img' alt="error generating the image" />
+										<div className="error-images">
+											<img src={ErrorImg1} className='error-img-1' alt="error generating the image" />
+											<img src={ErrorImg2} className='error-img-2' alt="error generating the image" />
+										</div>
 									</div>
 								)
 								: imageUrl ? ( <img src={imageUrl} className='generated-image' onClick={() => setStarChartZoom(true)} /> ) : ''
