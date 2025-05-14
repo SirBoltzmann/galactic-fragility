@@ -16,6 +16,7 @@ const SpaceOverview = () => {
 	const [ loading, setLoading ] = useState(false); //testing
 	const [ error, setError ] = useState(false);
 	const [ showInfo, setShowInfo ] = useState(false);
+	const [ starChartZoom, setStarChartZoom ] = useState(false);
 
 	// Obtain Location
 	useEffect(() => {
@@ -175,8 +176,17 @@ const SpaceOverview = () => {
 										<img src={ErrorImg} className='error-img' alt="error generating the image" />
 									</div>
 								)
-								: imageUrl ? ( <img src={imageUrl} className='generated-image' /> ) : ''
+								: imageUrl ? ( <img src={imageUrl} className='generated-image' onClick={() => setStarChartZoom(true)} /> ) : ''
 					}
+
+					{ starChartZoom && ( //Displayed when user wanna zoom the image
+						<div className="image-zoom-background">
+							<div className="image-zoom-content">
+								<i className='fas fa-times' onClick={() => setStarChartZoom(false)}></i>
+								<img src={imageUrl} alt="generated image with zoom" className='zoomed-image'/>
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>
