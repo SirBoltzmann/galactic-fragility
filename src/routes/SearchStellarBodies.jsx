@@ -26,6 +26,9 @@ const SearchStellarBodies = () => {
                 // hero-btn to show ---- hero-btn-hide to hide
                 btnClass='hero-btn'
             />
+
+            <p style={{ padding: '2rem', fontWeight: 'bolder', fontSize: '1.5rem', backgroundColor: 'black', color: '#fff', marginBottom: '0' }}> Under Development.. This tool will be available soon.. :3</p>
+
             <Footer/>
         </>
     )
